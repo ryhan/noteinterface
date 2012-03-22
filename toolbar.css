@@ -1,0 +1,238 @@
+
+
+@-webkit-keyframes toolbarIn
+{
+	0%, 50%{
+		opacity:0.0;
+		top:-30px;
+	}
+	100%{
+		opacity:0.8;
+		top:80px;
+	}
+}
+
+@-webkit-keyframes fadeIn
+{
+	0%{ opacity:0.0; top:-30px;}
+	100%{opacity:0.8; top:0;}
+}
+
+div.toolbar{
+	-webkit-animation: toolbarIn 1.5s;
+	position:absolute;
+	width:500px;
+	left:150px;
+	top:80px;
+	margin:0;
+	box-sizing:border-box;
+	padding:5px;
+	height:50px;
+	background-color:#204EEC;
+	background: -webkit-gradient(linear, left top, left bottom, from(#4E44EF), to(#2E35BF));
+	border:1px solid #1C2074;
+	box-shadow: 0 0 10px rgba(0, 72, 255, 0.5),
+				inset 0 1px 0 rgba(255,255,255,0.2);
+	color:#FFF;
+	border-radius:5px;
+	opacity:0.8;
+	z-index:5;
+	-webkit-transition: all .2s ease-in-out;
+}
+div.toolbar.fullwidth{
+	-webkit-animation: fadeIn 0.5s;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	opacity:0.8;
+	border-radius:0;
+	border-left:none;
+	border-right:none;
+	border-top:none;
+	box-shadow: 0 0 10px #5660FF,
+				inset 0 1px 0 rgba(255,255,255,0.1),
+				inset 0 25px 0 rgba(255,255,255,0.02);
+}
+@-webkit-keyframes fastopen
+{
+	0%{
+		opacity:0.0;
+		top:110px;
+		width:800px;
+		left:0px;
+	}
+	100%{
+		opacity:0.5;
+		width:500px;
+		left:150px;
+		top:80px;
+	}
+}
+div.toolbar.fastopen{
+	-webkit-animation: fastopen 0.5s;
+}
+
+div.toolbar div.btnarray{
+	height:30px;
+	padding:0;
+	box-sizing:border-box;
+	display:inline-block;
+	position:absolute;
+	top:10px;
+}
+div.btn{
+	cursor:pointer;
+	vertical-align:text-top;
+	position:relative;
+	top:0;
+	left:0;
+	height:30px;
+	font-size:12px;
+	box-sizing:border-box;
+	display:inline-block;
+	padding:4px;
+	border-radius:3px;
+	margin:0;
+	margin-right:5px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#2232DB), to(#172296));
+	border:1px solid #0E145A;
+	box-shadow: inset 0 1px 0 #6F88FF,
+				inset 0 15px 0 rgba(255,255,255,0.2);
+	color:#FFF;
+
+}
+	div.btn img{
+		height:23px;
+		position:relative;
+		top:0;
+	}
+
+div.btn:hover{
+	box-shadow:	0 0 5px #FFF,
+				inset 0 1px 0 #6F88FF,
+				inset 0 15px 0 rgba(255,255,255,0.2);
+}
+div.btn:active{
+	opacity:0.8;
+	box-shadow:	0 0 2px #222,
+				inset 0 1px 0 #222,
+				inset 0 22px 0 rgba(0,0,0,0.2);
+}
+
+.show-summary div.summary.obscured + div.note-container{
+	box-shadow:	0 0 10px rgba(255, 235, 0, 0.5);
+	border:1px solid rgba(51, 44, 0, 0.3);
+	-webkit-transition: all .2s ease-in-out;
+}
+
+.show-summary div.summary.unobscured + div.note-container{
+	left:300px;
+	top:200px;
+	/*top:100px;*/
+	-webkit-transition: all .2s ease-in-out;
+}
+
+div.summary{
+	cursor:pointer;
+	opacity:0.0;
+	visibility:hidden;
+	-webkit-transition: all .2s ease-in-out;
+	position:absolute;
+	top:200px;
+	top:220px;
+	left:-300px;
+	width:250px;
+	box-sizing:border-box;
+	min-height:260px;
+	padding:25px;
+	background-color:#FFEC8C;
+	color:#9B8543;
+	border-radius:3px;
+	border:1px solid #E6C663;
+	box-shadow: 0 0 10px rgba(255, 218, 93, 0.5),
+				0 4px 10px rgba(0,0,0,0.5),
+				inset 0 0 10px rgba(255,255,255,0.3);
+
+	font-size:14px;
+	line-height:21px;
+}
+
+/*
+.show-summary div#summary{
+	opacity:0.9;
+	visibility:visible;
+	background-color:#FFF;
+	border:1px solid #DDD;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+	left:120px;
+	top:180px;
+	-webkit-transform:rotate(-2deg);
+	z-index:-1;
+	-webkit-transition: all .2s ease-in-out;
+}
+*/
+.show-summary div.summary{
+	visibility:visible;
+	opacity:1.0;
+	left:0;
+	/*top:100px;*/
+	-webkit-transition: all .2s ease-in-out;
+}
+
+@-webkit-keyframes tugLeft
+{
+	0%, 100%{
+		left:130px;
+		top:240px;
+	}
+	40% {
+		left:120px;
+		top:235px;
+	}
+}
+
+.show-summary div.summary.obscured{
+	opacity:0.8;
+	/*
+	-webkit-animation: tabglow 3s infinite;
+	min-height:45px;
+	height:45px;
+
+	background-color:#4639E9;
+	border:1px solid #252AA4;
+	*/
+	-webkit-animation: tugLeft 0.4s 2;
+	position:absolute;
+	box-shadow:0 0 10px rgba(0,0,0,0.5);
+	left:130px;
+	top:240px;
+	-webkit-transition: all .2s ease-in-out;
+}
+	.show-summary div.summary.obscured:hover{
+		-webkit-animation: tugLeft 0.4s infinite;
+		opacity:1.0;
+		top:215px;
+		left:125px;
+		box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+		-webkit-transition: all .2s ease-in-out;
+	}
+
+.show-summary div.summary.unobscured:after{
+	display:block;
+	box-sizing:border-box;
+	text-align:center;
+	width:250px;
+	position:absolute;
+	bottom:-50px;
+	left:0px;
+	background-color:rgba(0,0,0,0.1);
+	padding:3px 10px;
+	border-radius:4px;
+	content: "Commented Outline";
+	font-size:12px;
+	color:rgba(255,255,255,0.5);
+}
+div.summary strong{
+	text-decoration: underline;
+}

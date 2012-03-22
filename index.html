@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scratchpad</title>
+	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=yes" />
+
+	<!--
+	<script src="js/libs/base64.js"></script>
+	<script src="js/libs/sprintf.js"></script>
+	<script src="js/libs/jspdf.js"></script>
+-->
+
+	<script src="js/markup.js"></script>
+
+	
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="toolbar.css">
+	
+</head>
+<body onload="load();return false;">
+
+	<img id="glow" src="img/glow.png"/>
+	<div class="toolbar" id="toolbar">
+		<div class="btnarray" style="left:10px;">
+			<div class="btn"><img src="img/cloud.png"/></div>
+			<div class="btn"><img src="img/newDoc.png"/></div>
+			<div class="btn"><img src="img/download.png"/></div>
+		</div>
+		<div class="btnarray" style="right:10px;">
+			<div class="btn"><img src="img/User.png"/></div>
+		</div>
+		<!--<img src="img/Users.png"/>-->
+	</div>`
+	<div id="summary-toggle" class="hide-summary">
+		<div id="summary" class="summary obscured" onclick="toggleObscureSummary(); return false;">
+			<strong>Summary</strong><br/>
+		</div>
+		<div class="note-container">
+			<div id="scratchpad" contenteditable=true>
+				<div>Let's start working.</div>
+			</div>
+			<div id="latexLayer"></div>
+			<div class="hideToken"></div>
+		</div>
+	</div>
+	
+	
+</body>
